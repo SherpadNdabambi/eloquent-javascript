@@ -5,9 +5,7 @@ function findSolution(target)
     {
         if (current < 1) return null;
         if (current == 1) return history;
-        if (!(current % 3) && find((current / 3), history.replace('1', "1 * 3")))
-            return find((current / 3), history.replace('1', "1 * 3"));
-        return find(current - 5, history + " + 5");
+        return find(current - 5, '(' + history + " + 5)") || find((current / 3), '(' + history + " * 3)");
     }
 
     return find(target, "1");
