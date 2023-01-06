@@ -1,4 +1,11 @@
 // doesn't work for findSolution(24)
+
+/**
+ * 
+ * @param {number} target
+ * @returns {sting} how to get to the target number by stating from one and
+ * either multiplying by 3 or adding 5
+ */
 function findSolution(target)
 {
     function find(current, history)
