@@ -1,5 +1,6 @@
 /** @type {Array} */
-let fleet = [
+let ancestry = JSON.parse(ANCESTRY_FILE),
+   fleet = [
    {
       make: "Volkswagen",
       model: "Polo",
@@ -66,4 +67,9 @@ console.log("Newest car:", reduce(fleet, (car1, car2) => {
 // using the standard array reduce function
 console.log("Cheapest car", fleet.reduce((car1, car2) => {
    return (car1.price < car2.price) ? car1 : car2;
+}));
+
+// using the standard array reduce function
+console.log("Most recently born ancestor", ancestry.reduce((person1, person2) => {
+   return (person1.born > person2.born) ? person1 : person2;
 }));
