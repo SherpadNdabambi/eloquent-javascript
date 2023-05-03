@@ -17,5 +17,5 @@ This repository contains my solutions to the [Eloquent JavaScript](https://eloqu
 
 ## To do
 
-- [ ] download [code](http://eloquentjavascript.net/2nd_%7B%7Dedition/code)
-- [ ] download [Jacques' Journal](http://eloquentjavascript.net/2nd_%7B%7Dedition/code/jacques_%7B%7Djournal.js)
+- [x] download [code](http://eloquentjavascript.net/2nd_%7B%7Dedition/code)
+- [x] download [Jacques' Journal](http://eloquentjavascript.net/2nd_%7B%7Dedition/code/jacques_%7B%7Djournal.js)
