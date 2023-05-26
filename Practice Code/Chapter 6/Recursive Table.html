@@ -5,8 +5,17 @@
 	<title>Recursive Table</title>
 
 	<style>
-		table, table * {
-			border: 1px solid;
+		code {
+            background-color: rgb(40, 40, 40);
+			border-radius: 5px;
+            color: white;
+            padding: 1.5px 5px;
+		}
+		.code-snippet {
+            background-color: rgb(30, 30, 30);
+			border-radius: 5px;
+            color: white;
+            padding: 10px;
 		}
 	</style>
 
@@ -19,7 +28,9 @@
 
 	<h1>Recursive Table</h1>
 
-	<p>
+    <h2>Project description</h2>
+
+    <p>
 		The <code>drawTable</code> function recursively draws a table by taking in an array of objects or arrays as an argument and returning a string representating the data in the array.
 	</p>
 	<p>
@@ -27,8 +38,32 @@
 	</p>
 	<p>
 	    For example, the code
+    </p>
+
+<pre class="code-snippet">
+console.log(drawTable(MOUNTAINS));
+</pre>
+
+    <p>
+        will produce the output:
+    </p>
 
 <pre>
+name         height country
+------------ ------ -------------
+Kilimanjaro    5895 Tanzania
+Everest        8848 Nepal
+Mount Fuji     3776 Japan
+Mont Blanc     4808 Italy/France
+Vaalserberg     323 Netherlands
+Denali         6168 United States
+Popocatepetl   5465 Mexico
+</pre>
+
+    <p>
+        And
+    </p>
+<pre class="code-snippet">
 let series = [
     {
         title: "Rick and Morty",
@@ -47,7 +82,7 @@ let series = [
                     number: 3,
                     title: "Anatomy Park"
                 }
-            ];
+            ]
         }]
     },
     {
@@ -59,20 +94,58 @@ let series = [
                     number: 1,
                     title: "Godflame"
                 },
-                {
-                    number: 2
-                }
-            ];
+                { number: 2 }
+            ]
         }]
     }
 ];
 
-console.log(drawTable(series);
+console.log(drawTable(series));
 </pre>
 
-        will return the following output:
+    <p>
+        will produce
+    </p>
 
 <pre>
+    title                seasons
+-------------- ---------------------------
+               number       episodes
+               ------ --------------------
+                      number title
+Rick and Morty        ------ -------------
+                 1      1    Pilot
+                        2    Lawnmower Dog
+                        3    Anatomy Park
+               number       episodes      
+               ------ --------------------
+                      number title
+See              1    ------ -------------
+                        1    Godflame
+                        2
+</pre>
+    </p>
+
+    <h2>Improvement</h2>
+
+    <ol>
+        <li>Divide columns with vertical lines.</li>
+        <li>Underline multiline rows.</li>
+        <li>Borders around table.</li>
+    </ol>
+
+<pre>
++---------------------------------------+
+| name         | height | country       |
+|--------------+--------+---------------|
+| Kilimanjaro  |   5895 | Tanzania      |
+| Everest      |   8848 | Nepal         |
+| Mount Fuji   |   3776 | Japan         |
+| Mont Blanc   |   4808 | Italy/France  |
+| Vaalserberg  |    323 | Netherlands   |
+| Denali       |   6168 | United States |
+| Popocatepetl |   5465 | Mexico        |
++---------------------------------------+
 +--------------------------------------------------+
 |     title      |             seasons             |
 |----------------+---------------------------------|
@@ -80,21 +153,19 @@ console.log(drawTable(series);
 |                |--------+------------------------|
 |                |        | number |     title     |
 | Rick and Morty |        |--------+---------------|
-|                |   1    |    1   | Pilot         |
-|                |        |    2   | Lanwmower Dog |
-|                |        |    3   | Anatomy Park  |
+|                |   1    |   1    | Pilot         |
+|                |        |   2    | Lawnmower Dog |
+|                |        |   3    | Anatomy Park  |
 |----------------+--------+------------------------|
 |                | number |        episodes        |
 |                |--------+------------------------|
 |                |        | number |     title     |
-| See            |        |--------+---------------|
-|                |   1    |    1   | Godflame      |
-|                |        |    2   |               |
+| See            |   1    |--------+---------------|
+|                |        |   1    | Godflame      |
+|                |        |   2    |               |
 +--------------------------------------------------+
 </pre>
-    </p>
-
-	<p>
+    <p>
 		Output displayed via console.
 	</p>
 
