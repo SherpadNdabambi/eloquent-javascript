@@ -1,6 +1,5 @@
 var http = require("http"),
   fs = require("fs");
-const { decode } = require("punycode");
 
 var methods = Object.create(null);
 
@@ -27,7 +26,6 @@ methods.GET = function (path, respond) {
   fs.stat(path, function (error, stats) {
     if (error && error.code == "ENOENT") respond(404, "File not found");
     else if (error) respond(500, error.toString());
-    else if (error) respond(500, error.toString());
     else if (stats.isDirectory())
       fs.readdir(path, function (error, files) {
         if (error) respond(500, error.toString());
@@ -53,3 +51,14 @@ function respondErrorOrNothing(respond) {
     else respond(204);
   };
 }
+
+methods.PUT = function (path, respond, request) {
+  var outStream = fs.createWriteStream(path);
+  outStream.on("error", function (error) {
+    respond(500, error.toString());
+  });
+  outStream.on("finish", function () {
+    respond(204);
+  });
+  request.pipe(outStream);
+};
