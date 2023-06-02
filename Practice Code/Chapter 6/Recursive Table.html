@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<head>
+
+	<title>Recursive Table</title>
+
+	<style>
+		table, table * {
+			border: 1px solid;
+		}
+	</style>
+
+	<script defer type="text/javascript" src="./js/mountains.js"></script>
+	<script defer type="text/javascript" src="./js/Recursive Table.js"></script>
+
+</head>
+
+<body>
+
+	<h1>Recursive Table</h1>
+
+	<p>
+		The <code>drawTable</code> function recursively draws a table by taking in an array of objects or arrays as an argument and returning a string representating the data in the array.
+	</p>
+	<p>
+	    An array is represented as a table and an object is represented as a row. The properties of an object are represented as columns.
+	</p>
+	<p>
+	    For example, the code
+
+<pre>
+let series = [
+    {
+        title: "Rick and Morty",
+        seasons: [{
+            number: 1,
+            episodes: [
+                {
+                    number: 1,
+                    title: "Pilot"
+                },
+                {
+                    number: 2,
+                    title: "Lawnmower Dog"
+                },
+                {
+                    number: 3,
+                    title: "Anatomy Park"
+                }
+            ];
+        }]
+    },
+    {
+        title: "See",
+        seasons: [{
+            number: 1,
+            episodes: [
+                {
+                    number: 1,
+                    title: "Godflame"
+                },
+                {
+                    number: 2
+                }
+            ];
+        }]
+    }
+];
+
+console.log(drawTable(series);
+</pre>
+
+        will return the following output:
+
+<pre>
++--------------------------------------------------+
+|     title      |             seasons             |
+|----------------+---------------------------------|
+|                | number |        episodes        |
+|                |--------+------------------------|
+|                |        | number |     title     |
+| Rick and Morty |        |--------+---------------|
+|                |   1    |    1   | Pilot         |
+|                |        |    2   | Lanwmower Dog |
+|                |        |    3   | Anatomy Park  |
+|----------------+--------+------------------------|
+|                | number |        episodes        |
+|                |--------+------------------------|
+|                |        | number |     title     |
+| See            |        |--------+---------------|
+|                |   1    |    1   | Godflame      |
+|                |        |    2   |               |
++--------------------------------------------------+
+</pre>
+    </p>
+
+	<p>
+		Output displayed via console.
+	</p>
+
+</body>
