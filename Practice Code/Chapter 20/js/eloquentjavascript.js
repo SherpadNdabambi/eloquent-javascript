@@ -8,6 +8,6 @@ var request = http.request(
   },
   function (response) {
     console.log("Server responded with status code", response.statusCode);
-  }
+  },
 );
 request.end();

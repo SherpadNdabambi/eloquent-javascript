@@ -1,34 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <head>
+  <title>Waiting for multiple promises</title>
 
-	<title>Waiting for multiple promises</title>
-
-	<script defer type="text/javascript" src="./js/Waiting for multiple promises.js"></script>
-
+  <script
+    defer
+    type="text/javascript"
+    src="./js/Waiting for multiple promises.js"
+  ></script>
 </head>
 
 <body>
+  <h1>Waiting for multiple promises</h1>
 
-	<h1>Waiting for multiple promises</h1>
+  <h2>Challenge</h2>
 
-	<h2>Challenge</h2>
+  <p>
+    The Promise constructor has an all method that, given an array of promises,
+    returns a promise that waits for all of the promises in the array to finish.
+    It then succeeds, yielding an array of result values. If any of the promises
+    in the array fail, the promise returned by all fails too (with the failure
+    value from the failing promise).
+  </p>
+  <p>
+    Try to implement something like this yourself as a regular function called
+    all.
+  </p>
+  <p>
+    Note that after a promise is resolved (has succeeded or failed), it can’t
+    succeed or fail again, and further calls to the functions that resolve it
+    are ignored. This can simplify the way you handle failure of your promise.
+  </p>
 
-	<p>
-		The Promise constructor has an all method that, given an array of promises,
-returns a promise that waits for all of the promises in the array to finish. It
-then succeeds, yielding an array of result values. If any of the promises in the array fail, the promise returned by all fails too (with the failure value from the
-failing promise).
-	</p>
-	<p>
-		Try to implement something like this yourself as a regular function called all.
-	</p>
-	<p>
-		Note that after a promise is resolved (has succeeded or failed), it can’t succeed or fail again, and further calls to the functions that resolve it are ignored. This can simplify the way you handle failure of your promise.
-	</p>
-
-	<p>
-		Output displayed via console.
-	</p>
-
+  <p>Output displayed via console.</p>
 </body>

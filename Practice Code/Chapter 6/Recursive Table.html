@@ -1,34 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <head>
+  <title>Recursive Table</title>
 
-	<title>Recursive Table</title>
+  <style>
+    table,
+    table * {
+      border: 1px solid;
+    }
+  </style>
 
-	<style>
-		table, table * {
-			border: 1px solid;
-		}
-	</style>
-
-	<script defer type="text/javascript" src="./js/mountains.js"></script>
-	<script defer type="text/javascript" src="./js/Recursive Table.js"></script>
-
+  <script defer type="text/javascript" src="./js/mountains.js"></script>
+  <script defer type="text/javascript" src="./js/Recursive Table.js"></script>
 </head>
 
 <body>
+  <h1>Recursive Table</h1>
 
-	<h1>Recursive Table</h1>
+  <p>
+    The <code>drawTable</code> function recursively draws a table by taking in
+    an array of objects or arrays as an argument and returning a string
+    representating the data in the array.
+  </p>
+  <p>
+    An array is represented as a table and an object is represented as a row.
+    The properties of an object are represented as columns.
+  </p>
+  <p>For example, the code</p>
 
-	<p>
-		The <code>drawTable</code> function recursively draws a table by taking in an array of objects or arrays as an argument and returning a string representating the data in the array.
-	</p>
-	<p>
-	    An array is represented as a table and an object is represented as a row. The properties of an object are represented as columns.
-	</p>
-	<p>
-	    For example, the code
-
-<pre>
+  <pre>
 let series = [
     {
         title: "Rick and Morty",
@@ -68,11 +68,12 @@ let series = [
 ];
 
 console.log(drawTable(series);
-</pre>
+</pre
+  >
 
-        will return the following output:
+  will return the following output:
 
-<pre>
+  <pre>
 +--------------------------------------------------+
 |     title      |             seasons             |
 |----------------+---------------------------------|
@@ -91,11 +92,8 @@ console.log(drawTable(series);
 |                |   1    |    1   | Godflame      |
 |                |        |    2   |               |
 +--------------------------------------------------+
-</pre>
-    </p>
+</pre
+  >
 
-	<p>
-		Output displayed via console.
-	</p>
-
+  <p>Output displayed via console.</p>
 </body>

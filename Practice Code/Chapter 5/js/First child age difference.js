@@ -1,25 +1,24 @@
 window.onload = () => {
-
   let parents = ancestry.filter((candidate) => {
-      return hasChild(candidate);
-    });
+    return hasChild(candidate);
+  });
 
   firstChildAgeDifferences = parents.map((parent) => {
-    
-    parent.firstChildAgeDifference = Math.abs(parent.born - findFirstChild(parent).born);
+    parent.firstChildAgeDifference = Math.abs(
+      parent.born - findFirstChild(parent).born,
+    );
     return parent;
   });
 
-  console.log(firstChildAgeDifferences)
-}
+  console.log(firstChildAgeDifferences);
+};
 
 function firstChildAgeDifference(parent) {
-	
-	// declare local variables
-	let parentBirthYear = parent.born,
-	    firstChildBirthYear = findFirstChild(parent).born;
+  // declare local variables
+  let parentBirthYear = parent.born,
+    firstChildBirthYear = findFirstChild(parent).born;
 
-	return firstChildBirthYear - parentBirthYear;
+  return firstChildBirthYear - parentBirthYear;
 }
 
 function hasChild(candidate) {

@@ -35,5 +35,5 @@ all([soon(1), fail(), soon(3)]).then(
   },
   function (error) {
     if (error.message != "boom") console.log("Unexpected failure:", error);
-  }
+  },
 );

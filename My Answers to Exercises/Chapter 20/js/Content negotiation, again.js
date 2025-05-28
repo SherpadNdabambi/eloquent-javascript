@@ -32,7 +32,7 @@ function requestAuthor(mediaType) {
       response.on("end", () => {
         console.log(body);
       });
-    }
+    },
   );
   request.end();
 }
