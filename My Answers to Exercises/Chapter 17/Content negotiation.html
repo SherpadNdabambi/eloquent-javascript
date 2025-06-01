@@ -1,45 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <head>
+  <title>Content negotiation</title>
 
-	<title>Content negotiation</title>
-
-	<script defer type="text/javascript" src="./js/Content negotiation.js"></script>
-
+  <script
+    defer
+    type="text/javascript"
+    src="./js/Content negotiation.js"
+  ></script>
 </head>
 
 <body>
+  <h1>Content negotiation</h1>
 
-	<h1>Content negotiation</h1>
+  <h2>Challenge</h2>
 
-	<h2>Challenge</h2>
+  <p>
+    One of the things that HTTP can do, but that we have not discussed in this
+    chapter, is called content negotiation. The <code>Accept</code> header for a
+    request can be used to tell the server what type of document the client
+    would like to get. Many servers ignore this header, but when a server knows
+    of various ways to encode a resource, it can look at this header and send
+    the one that the client prefers.
+  </p>
+  <p>
+    The URL
+    <a href="eloquentjavascript.net/author">eloquentjavascript.net/author</a> is
+    configured to respond with either plaintext, HTML, or JSON, depending on
+    what the client asks for. These formats are identified by the standardized
+    <i>media types</i> <code>text/plain</code>, <code>text/html</code>, and
+    <code>application/json</code>
+  </p>
+  <p>
+    Send requests to fetch all three formats of this resource. Use the
+    <code>setRequestHeader</code> method of your
+    <code>XMLHttpRequest</code> object to set the header named
+    <code>Accept</code> to one of the media types given earlier. Make sure you
+    set the header <i>after</i> calling open but before calling
+    <code>send</code>.
+  </p>
+  <p>
+    Finally, try asking for the media type
+    <code>application/rainbows+unicorns</code> and see what happens.
+  </p>
 
-	<p>
-		One of the things that HTTP can do, but that we have not discussed in this
-chapter, is called content negotiation. The <code>Accept</code> header for a request can be
-used to tell the server what type of document the client would like to get. Many
-servers ignore this header, but when a server knows of various ways to encode
-a resource, it can look at this header and send the one that the client prefers.
-	</p>
-	<p>
-		The URL <a href="eloquentjavascript.net/author">eloquentjavascript.net/author</a> is configured to respond with either
-plaintext, HTML, or JSON, depending on what the client asks for. These
-formats are identified by the standardized <i>media types</i> <code>text/plain</code>, <code>text/html</code>, and
-<code>application/json</code>
-	</p>
-	<p>
-		Send requests to fetch all three formats of this resource. Use the <code>setRequestHeader</code>
-method of your <code>XMLHttpRequest</code> object to set the header named <code>Accept</code> to one of
-the media types given earlier. Make sure you set the header <i>after</i> calling open
-but before calling <code>send</code>.
-	</p>
-	<p>
-		Finally, try asking for the media type <code>application/rainbows+unicorns</code> and see
-what happens.
-	</p>
-
-	<p>
-		Output displayed via console.
-	</p>
-
+  <p>Output displayed via console.</p>
 </body>

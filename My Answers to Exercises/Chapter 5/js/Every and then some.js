@@ -1,18 +1,16 @@
 window.onload = () => {
-    console.log(
-        "every([2, 4, 5, 7, 8, 10], isEven): ",
-        every([2, 4, 5, 7, 8, 10], isEven));
-    console.log(
-`some(
+  console.log(
+    "every([2, 4, 5, 7, 8, 10], isEven): ",
+    every([2, 4, 5, 7, 8, 10], isEven),
+  );
+  console.log(
+    `some(
     ["Doggo", { name: "John" }, "Cat", 1],
     isObject
 ):\n`,
-        some(
-            ["Doggo", { name: "John" }, "Cat", 1],
-            isObject
-        )
-    );
-}
+    some(["Doggo", { name: "John" }, "Cat", 1], isObject),
+  );
+};
 
 /**
  *
@@ -20,17 +18,17 @@ window.onload = () => {
  * @param {Function} f
  */
 function every(array, f) {
+  // declare local variables
+  let condition = true,
+    index = 0;
 
-    // declare local variables
-    let condition = true, index = 0;
+  // test function predicate on array elements
+  while (condition && index < array.length) {
+    condition = f(array[index]);
+    index++;
+  }
 
-    // test function predicate on array elements
-    while (condition && index < array.length) {
-        condition = f(array[index]);
-        index++;
-    }
-
-    return condition;
+  return condition;
 }
 
 /**
@@ -39,7 +37,7 @@ function every(array, f) {
  * @returns
  */
 function isEven(number) {
-    return number % 2 === 0;
+  return number % 2 === 0;
 }
 
 /**
@@ -47,8 +45,8 @@ function isEven(number) {
  * @param {Thing} thing
  * @returns
  */
-function isObject (thing) {
-    return typeof(thing) === "object";
+function isObject(thing) {
+  return typeof thing === "object";
 }
 
 /**
@@ -58,15 +56,15 @@ function isObject (thing) {
  * @returns
  */
 function some(array, f) {
+  // declare local variables
+  let condition = false,
+    index = 0;
 
-    // declare local variables
-    let condition = false, index = 0;
+  // test function predicate on array elements
+  while (!condition && index < array.length) {
+    condition = f(array[index]);
+    index++;
+  }
 
-    // test function predicate on array elements
-    while (!condition && index < array.length) {
-        condition = f(array[index]);
-        index++;
-    }
-
-    return condition;
+  return condition;
 }

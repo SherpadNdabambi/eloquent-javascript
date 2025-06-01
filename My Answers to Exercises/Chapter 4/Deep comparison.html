@@ -1,38 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <head>
-	
-	<title>Deep comparison Exercise</title>
+  <title>Deep comparison Exercise</title>
 
-	<script defer type="text/javascript" src="./js/Deep comparison.js"></script>
-
+  <script defer type="text/javascript" src="./js/Deep comparison.js"></script>
 </head>
 
 <body>
-	
-	<h1>Deep comparison Exercise</h1>
+  <h1>Deep comparison Exercise</h1>
 
-	<h2>Challenge</h2>
+  <h2>Challenge</h2>
 
-	<p>
-		The == operator compares objects by identity. But sometimes, you would
-		prefer to compare the values of their actual properties.
-	</p>
+  <p>
+    The == operator compares objects by identity. But sometimes, you would
+    prefer to compare the values of their actual properties.
+  </p>
 
-	<p>
-		Write a function, deepEqual, that takes two values and returns true only
-		if they are the same value or are objects with the same properties whose
-		values are also equal when compared with a recursive call to deepEqual.
-	</p>
+  <p>
+    Write a function, deepEqual, that takes two values and returns true only if
+    they are the same value or are objects with the same properties whose values
+    are also equal when compared with a recursive call to deepEqual.
+  </p>
 
-	<p>
-		To find out whether to compare two things by identity (use the ===
-		operator for that) or by looking at their properties, you can use the
-		typeof operator. If it produces "object" for both values, you should do a
-		deep comparison. But you have to take one silly exception into account:
-		by a historical accident, typeof null also produces "object".
-	</p>
+  <p>
+    To find out whether to compare two things by identity (use the === operator
+    for that) or by looking at their properties, you can use the typeof
+    operator. If it produces "object" for both values, you should do a deep
+    comparison. But you have to take one silly exception into account: by a
+    historical accident, typeof null also produces "object".
+  </p>
 
-	<p>Output displayed via console.</p>
-
+  <p>Output displayed via console.</p>
 </body>

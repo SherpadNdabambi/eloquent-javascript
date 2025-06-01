@@ -17,7 +17,7 @@ function makeRequest(mediaType) {
   request.addEventListener("load", function () {
     console.log(
       `${mediaType}:
-${request.responseText}`
+${request.responseText}`,
     );
   });
   request.send(null);

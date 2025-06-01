@@ -9,6 +9,6 @@ var request = http.request(
     response.on("data", function (chunk) {
       process.stdout.write(chunk.toString());
     });
-  }
+  },
 );
 request.end("Hello server");

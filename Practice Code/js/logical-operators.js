@@ -1,10 +1,10 @@
 console.log("NaN == NaN: " + (NaN == NaN));
 console.log("1 + 1 == 2 && 10 * 10 > 50 = " + (1 + 1 == 2 && 10 * 10 > 50));
-console.log("\"true LHS\" && \"true RHS\": " + ("true LHS" && "true RHS"));
-console.log("\"true LHS\" && false: " + ("true LHS" && false));
-console.log("false && \"true RHS\": " +  (false && "true RHS"));
+console.log('"true LHS" && "true RHS": ' + ("true LHS" && "true RHS"));
+console.log('"true LHS" && false: ' + ("true LHS" && false));
+console.log('false && "true RHS": ' + (false && "true RHS"));
 console.log("false && 0: " + (false && 0));
-console.log("\"true LHS\" || \"true RHS\": " + "true LHS" || "true RHS");
-console.log("\"true LHS\" || false: " + ("true LHS" || false));
-console.log("false || \"true RHS\": " +  (false || "true RHS"));
+console.log('"true LHS" || "true RHS": ' + "true LHS" || "true RHS");
+console.log('"true LHS" || false: ' + ("true LHS" || false));
+console.log('false || "true RHS": ' + (false || "true RHS"));
 console.log("false || 0: " + false || 0);
